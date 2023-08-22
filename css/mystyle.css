@@ -1,0 +1,98 @@
+/* Estilos para la imagen */
+.contfifa a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+/* Brillo inicial y zoom inicial */
+.contfifa a img {
+    filter: brightness(1);
+    transform: scale(1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Brillo y zoom al pasar el mouse */
+.contfifa a:hover img {
+    filter: brightness(1.75);
+    transform: scale(0.9); 
+}
+
+.cajfifa {
+    position: relative; 
+}
+
+/* Agregar sombra en la parte inferior */
+.cajfifa::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 5px; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+
+.caj8{
+    margin-top: 9%;
+}
+
+.cajbrics{
+    margin-top: 19%;
+
+}
+
+/*PROBANDO */
+
+/* Estilo para ocultar el contenido */
+.container .col-md-4 {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  
+  /* Estilo para mostrar el contenido */
+  .container .col-md-4.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+
+
+  .page-headerong {
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/ongheader.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-headerfifa {
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/fifaheader.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.page-paisheader {
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/paisheader.jpeg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-continenteheader {
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/continenteheader.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

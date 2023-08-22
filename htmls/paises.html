@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PAISES</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="../img/logo1.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/mystyle.css" rel="stylesheet">
+    <link href="../css/paisestyle.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar p-0">
+        <div class="container-lg p-0">
+            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../img/l1.png" class="logo"> <!-- Agrega la clase "logo" aquí -->
+                </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto py-0">
+                            <a href="../index.html" class="nav-item nav-link ">Inicio</a>
+                            <a href="continente.html" class="nav-item nav-link">Continente</a>
+                            <a href="ong.html" class="nav-item nav-link ">Ong</a>
+                            <a href="paises.html" class="nav-item nav-link active">Países</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-paisheader d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5 mb-5">
+        <h1 class="display-4 text-white mb-3 mt-0 mt-lg-5">PAISES</h1>
+        <div class="d-inline-flex text-white">
+            <p class="m-0"><a class="text-white" href="">Inicio</a></p>
+            <p class="m-0 px-2">/</p>
+            <p class="m-0">Paises</p>
+        </div>
+    </div>
+    <!-- Page Header Start -->
+
+
+    <!-- About Start -->
+    <div class="container-paises">
+        <div class="select-container text-center">
+            <select id="continentes" class="custom-select" onchange="mostrarPaises()">
+              <option value="">Selecciona un continente</option>
+              <option value="oceania">OCEANIA</option>
+              <option value="europa">EUROPA</option>
+              <option value="africa">AFRICA</option>
+              <option value="asia">ASIA</option>
+              <option value="america_sur">AMERICA SUR</option>
+              <option value="america_norte_central">AMERICA NORTE Y CENTRAL</option>
+            </select>
+            <span class="select-icon"></span>
+          </div>
+            
+    </div>
+
+    <div id="paises-container"></div>
+
+    <script>
+        function mostrarPaises() {
+            const select = document.getElementById('continentes');
+            const paisesContainer = document.getElementById('paises-container');
+            const selectedContinente = select.value;
+
+            // Lista de países para cada continente con su respectivo enlace
+            const paises = {
+                oceania: [
+                    { nombre: "Nueva Zelanda", enlace: "oceania/nueva_zelanda.html" },
+                    { nombre: "Australia", enlace: "oceania/australia.html" },
+                    { nombre: "Fiji", enlace: "oceania/fiji.html" }
+                ],
+                europa: [
+                    { nombre: "Suiza", enlace: "europa/suiza.html" },
+                    { nombre: "Inglaterra", enlace: "europa/inglaterra.html" },
+                    { nombre: "España", enlace: "europa/espana.html" }
+                ],
+                africa: [
+                    { nombre: "Egipto", enlace: "../CAF/plantilla/egipto.php" },
+                    { nombre: "Argelia", enlace: "../CAF/plantilla/argelia.php"},
+                    { nombre: "Sudáfrica", enlace: "../CAF/plantilla/sudafrica.php"}
+                ],
+                asia: [
+                    { nombre: "Malasia", enlace: "asia/malasia.html" },
+                    { nombre: "Japon", enlace: "asia/japon.html" },
+                    { nombre: "Rusia", enlace: "asia/rusia.html" }
+                ],
+                america_sur: [
+                    { nombre: "Ecuador", enlace: "america_sur/ecuador.html" },
+                    { nombre: "Argentina", enlace: "america_sur/argentina.html" },
+                    { nombre: "Paraguay", enlace: "america_sur/paraguay.html" }
+                ],
+                america_norte_central: [
+                    { nombre: "USA", enlace: "america_norte_central/usa.html" },
+                    { nombre: "Canada", enlace: "america_norte_central/canada.html" },
+                    { nombre: "Mexico", enlace: "america_norte_central/mexico.html" }
+                ],
+            };
+
+            // Borra el contenido anterior
+            paisesContainer.innerHTML = '';
+
+            // Si se selecciona un continente, muestra los países correspondientes con enlaces
+            if (selectedContinente !== '') {
+                const paisesDelContinente = paises[selectedContinente];
+
+                // Crea enlaces para cada país
+                paisesDelContinente.forEach(pais => {
+                    const enlace = document.createElement('a');
+                    enlace.textContent = pais.nombre;
+                    enlace.className = 'btn btn-danger';
+                    enlace.onclick = function () {
+                        window.open(pais.enlace, "_blank"); // Abrir archivos locales en una nueva ventana
+                    };
+                    paisesContainer.appendChild(enlace);
+                });
+            }
+        }
+    </script>
+
+    <!-- Agregar el script de Bootstrap 3 al final del body -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    </div>
+    <!-- About End -->
+
+
+    
+	<!-- Team Start -->
+    <div class="container-fluid pt-5">
+            </div>
+    <!-- Team End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white mt-5 pt-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">
+            &copy; <a class="font-weight-semi-bold" href="#">Your Site Name</a>. All Rights Reserved. Designed by
+            <a class="font-weight-semi-bold" href="https://htmlcodex.com">HTML Codex</a>
+        </p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="../mail/jqBootstrapValidation.min.js"></script>
+    <script src="../mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

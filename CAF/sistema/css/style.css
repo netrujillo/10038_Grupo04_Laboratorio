@@ -1,0 +1,241 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formularios{
+    width: 20rem;
+    height: auto;
+    margin: 1rem auto;
+}
+
+.formularios h3{
+    text-align: center;
+}
+
+.formularios button{
+    margin-top: 1rem;
+}
+
+.registrar{
+    float: right;
+}
+
+.cancelar{
+    color: #fff;
+    text-decoration: none;
+}
+
+.formularios input{
+    margin-top: 0.3rem;
+}
+
+.msg_error{
+    color: red !important;
+}
+
+.msg_save{
+    color: #126e00 !important;
+}
+
+.notItemOne option:first-child{
+    display: none;
+}
+
+/*tablas*/
+
+table{
+    text-align: center;
+}
+
+table tr:nth-child(odd){
+        background: #fff;
+    }
+
+table a{
+    text-decoration: none;
+}
+
+table .link_delete{
+    color: red;
+}
+
+.paginador ul{
+        padding: 15px;
+        list-style: none;
+        background: #fff;
+        margin-top: 15px;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .paginador a, .pageSelected{
+        color: #428bca;
+        border: 1px solid #ddd;
+        display: 5px;
+        display: inline-block;
+        font-size: 14px;
+        text-align: center;
+        width: 35px;
+        text-decoration: none;
+    }
+
+    .paginador a:hover{
+        background: #ddd;
+    }
+
+    .pageSelected{
+        color: #fff;
+        background: #428bca;
+        border: 1px solid #428bca;
+    }
+
+    .form_search{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        float: right;
+        background: initial;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .form_search .btn_search{
+        background: #1faac8;
+        color: #fff;
+        padding: 0 20px;
+        border: 0.3rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+.titulos{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+/*eliminar - confirmar*/
+
+.link_delete{
+        color: #f26b6b;
+    }
+
+    .data_delete{
+        text-align: center;
+    }
+
+    .data_delete h2{
+        font-size: 12pt;
+    }
+
+    .data_delete span{
+        font-weight:  bold;
+        color: #4f72d4;
+        font-size: 12pt;
+    }
+
+    .btn_cancel, .btn_ok{
+        width: 124px;
+        background: #478ba2;
+        color: #fff;
+        display: inline-block;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 15px;
+        border: none;
+        font-size: 13pt;
+        padding: 5px;
+    }
+
+    .btn_cancel{
+        background: #42b343;
+        text-decoration: none;
+    }
+
+    .ico_delete{
+        color: red;
+        margin: 2rem;
+    }
+
+/*Para las fotos*/
+
+.photo .prevPhoto {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+    height: 150px;
+    border: 2px solid #CCC;
+    position: relative;
+    cursor: pointer;
+    background: url(../images/uploads/user.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: auto;
+}
+
+    .prevPhoto label{
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;}
+
+    .prevPhoto img{
+        width: 100%;
+        height: 100%;}
+
+    .upimg, .notBlock{
+        display: none !important;}
+
+    .errorArchivo{
+        font-size: 16px;
+        font-family: arial;
+        color: #cc0000;
+        text-align: center;
+        font-weight: bold; 
+        margin-top: 10px;}
+
+    .delPhoto{
+        color: #ccc;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        background: red;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        z-index: 10;}
+
+    #tbl_list_productos img{
+        width: 50px;}
+
+    .imgProductoDelete{
+        width: 175px;}
+
+.img_de_producto img{
+        width: 80px;
+        height: auto;
+        margin: auto;
+    }
+
+

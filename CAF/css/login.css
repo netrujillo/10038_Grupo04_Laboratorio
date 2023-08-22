@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	padding: 0;
+	margin: 0;
+}
+
+.padre{
+	height: 100vh;
+	width: 100%;
+}
+
+.padre #fondo{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	position: absolute;
+}
+
+.hijo{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nieto{
+	width: 20rem;
+	z-index: 10;
+	padding: 1em;
+    background: transparent;
+}
+
+.nieto #title{
+	text-align: center;
+	color: #fff;
+	font-size: 2rem;
+	font-family: 'monospace', sans-serif;
+}
+
+.nieto img{
+	height: 7em;
+	width: 7em;
+	z-index: 20;
+	display: flex;
+	margin: 1rem auto;
+	background-color: #fff;
+	padding: 1rem;
+	clip-path: circle(50% at 50% 50%);
+}
+
+/*cajas de texto de usuario y contrasñea*/
+
+.nieto #user, .nieto #password{
+    width: 100%;
+    padding-bottom: .4em;
+    margin-bottom: 1.4em;
+    border-radius: 0.3px;
+    display: block;
+    border: none;
+    border-bottom: 3px solid #ccc;
+    background: transparent;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+
+.nieto #user, .nieto #password{
+	margin-top: 0.5em;
+}
+
+.nieto #user:focus, .nieto #password:focus{
+	background: linear-gradient(to bottom , transparent, #333);
+	outline: none;
+	border-bottom: 3px solid #fff;
+	color: #fff;
+/*	font-size: 1.4rem;*/
+}
+
+
+
+.nieto #password{
+	letter-spacing: 0.2em;
+}
+
+.nieto #password:focus{
+	letter-spacing: 0.2em;
+}
+
+
+/*boton de ingresar*/
+
+.nieto #ingresar{
+  border: 0.3rem solid #fff;
+  width: 8em;
+  height: 3.5em;
+  border-radius: 0.5em;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'monospace', sans-serif; 
+  margin: 1rem auto;
+  font-weight: bold;
+  display: block;
+}
+
+
+.nieto #ingresar:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.nieto #alerta{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	color: red;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-family: 'monospace', sans-serif;
+}
+
+/*haciendo los tamaños responsivos*/
+
+@media screen and (max-width: 900px){
+	
+	.nieto{
+	height: 34em;
+	}
+
+	.nieto img{
+		margin-bottom: 2em;
+	}
+
+	.nieto #user{
+		margin-bottom: 3em;
+	}
+
+	.nieto #ingresar{
+		margin-top: 3.5em;
+		font-size: 1.2em;
+	}
+}
+
+/*íconos del placeholder*/
+
+.input-container {
+    position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.3rem;
+  top: 30%;
+  transform: translateY(-30%);
+  color: #fff; /* Color del ícono */
+}
+
+.input-container input{
+	padding-left: 2rem;
+}
+

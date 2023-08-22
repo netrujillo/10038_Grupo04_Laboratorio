@@ -1,0 +1,37 @@
+
+/*Para el header*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+
+.cabezera{
+	background-color: #6387F5;
+	font-family: 'Outfit', sans-serif;
+}
+
+span, .titulo{
+	color: white;
+	font-family: 'Outfit', sans-serif;
+}
+
+.contenido{
+	color: white;
+	cursor: default;
+	font-size: 1.2rem;
+}
+
+.contenido:hover{
+	color: white;
+}
+
+.titulo_cerrar{
+	background-color: yellow;
+	text-align: center;
+}
+
+.cancelar{
+	margin-right: auto;
+}
+
+.cancelar, .salir{
+	width: 7rem;
+}

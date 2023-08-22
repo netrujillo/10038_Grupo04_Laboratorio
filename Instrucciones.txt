@@ -1,0 +1,7 @@
+1. Crear una base de datos en mysql con el nombre 'caf' e importar el archivo caf.sql
+
+2. Asegurarse que los datos de la conexión sean los adecuados
+Para acceder a este archivo, dirigirse a CAF->conexion.php
+
+Por defecto viene localhost, root, 123, caf
+
